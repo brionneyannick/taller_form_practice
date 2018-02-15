@@ -1,0 +1,20 @@
+<%= notice %>
+
+<%= form_with model: @venta, local: true do |form| %>
+
+  <br><%= form.label :detail%>
+  <br><%= form.text_area :detail, size: '50x10' %>
+
+  <br><%= form.label :category%>
+  <br><%= form.text_field :category, id: :sale_category %>
+
+  <br><%= form.label :value%>
+  <br><%= form.number_field :value, id: :sale_value %>
+
+  <br><%= form.label :discount%>
+  <br><%= form.number_field :discount, id: :sale_discount %>
+
+  <br><br><spam>Exento de iva</spam><%= form.check_box :iva %>
+
+<%= form.submit"Crear"%>
+<% end %>
